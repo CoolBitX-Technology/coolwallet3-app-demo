@@ -42,6 +42,7 @@
     "react-native-level-fs": "^3.0.1",
     "react-native-modal": "^11.5.3",
     "react-native-os": "^1.2.5",
+    "react-native-permissions": "^2.1.0",
     "react-native-randombytes": "^3.5.3",
     "react-native-segmented-control-tab": "^3.4.1",
     "react-native-tcp": "^3.3.2",

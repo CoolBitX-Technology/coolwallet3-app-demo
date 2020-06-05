@@ -48,7 +48,7 @@ class SettingPage extends Component {
           <TouchableOpacity
             style={{ ...defaultBtn }}
             onPress={this.getPassword}>
-            <Text style={defaultColor}>Get password</Text>
+            <Text style={defaultColor}>Get pairing pwd</Text>
           </TouchableOpacity>
         </View>
       </View>

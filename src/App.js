@@ -14,6 +14,8 @@ import RNBleTransport from "@coolwallets/transport-react-native-ble";
 import CoolWallet from '@coolwallets/wallet';
 import cwsETH from '@coolwallets/eth';
 
+import Permission from './Components/Permission';
+import WalletCreation from './Components/WalletCreation';
 import Connection from './Components/Connection';
 import Settings from './Components/Settings';
 import WalletTest from './Components/WalletTests';
@@ -57,10 +59,13 @@ export default class App extends React.Component {
       }
       throw error;
     });
+    const transport = RNBleTransport.connect(deviceOrId);
   }
 
   disconnect = () => {
+    console.log(`state: ${this.state.searchDevices}`);
     const { transport } = this.state;
+
     RNBleTransport.disconnect(transport.device.id);
     this.setState({
       transport: {}
@@ -143,14 +148,17 @@ export default class App extends React.Component {
         <SafeAreaView>
 
           <View style={main}>
-            <ScrollView
-              contentInsetAdjustmentBehavior="automatic"
-            >
+            <ScrollView contentInsetAdjustmentBehavior="automatic">
+
               <Text style={title}>CoolWalletS x RN BLE</Text>
+
+              <Permission />
 
               <Connection connect={this.connect} disconnect={this.disconnect} />
 
               <Settings hardware={wallet} appPublicKey={appPublicKey} reloadStorage={this.reloadStorage} />
+
+              <WalletCreation wallet={wallet} />
 
               <WalletTest wallet={wallet} />
 

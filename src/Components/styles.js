@@ -3,7 +3,6 @@ export const styles = StyleSheet.create({
   main: {
     backgroundColor: '#272b34',
     height: '100%',
-    padding: '5%'
   },
   defaultBtn: {
     height: 30,
@@ -43,11 +42,12 @@ export const styles = StyleSheet.create({
   inputStyle: {
     height: 40,
     backgroundColor: '#fff',
+    margin: 20,
     borderRadius: 5,
   },
   content: {
     backgroundColor: 'white',
-    padding: 22,
+    padding: 20,
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 4,

@@ -85,3 +85,7 @@ coverage/
 
 # CocoaPods
 /ios/Pods/
+
+
+# Test
+/src/Utils/dummy.js
